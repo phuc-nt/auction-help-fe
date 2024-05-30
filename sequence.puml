@@ -1,0 +1,19 @@
+@startuml
+participant User
+participant "User Interface" as UI
+participant "Vue.js App" as App
+participant "Chatbot API" as API
+
+User -> UI : Enter message
+UI -> App : Call sendMessage()
+activate App
+App -> App : Check if message is empty
+App -> UI : Add user message to messages
+App -> API : Send POST request with message
+activate API
+API --> App : Return response message
+deactivate API
+App -> UI : Add bot message to messages
+deactivate App
+UI -> User : Display messages
+@enduml

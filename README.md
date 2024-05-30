@@ -1,6 +1,10 @@
-# TBV Chatbot Frontend
+# Yahoo!オークション Assistant
 
-Đây là frontend cho dự án TBV Chatbot.
+Đây là frontend cho dự án Yahoo!オークション Assistant, một ứng dụng chatbot đơn giản được xây dựng với Vue.js và Tailwind CSS.
+
+## Business
+
+![Sequence Diagram](sequence.png)
 
 ## Bắt đầu
 
@@ -17,23 +21,23 @@ Bạn cần cài đặt:
 
 1. Clone kho lưu trữ:
 
-\`\`\`sh
+```
 git clone <url-kho-lưu-trữ>
-\`\`\`
+```
 
 2. Cài đặt các phụ thuộc:
 
-\`\`\`sh
+```
 npm install
-\`\`\`
+```
 
 ### Chạy ứng dụng
 
 Để bắt đầu ứng dụng, chạy:
 
-\`\`\`sh
+```
 npm start
-\`\`\`
+```
 
 Ứng dụng sẽ có sẵn tại `http://localhost:8080`.
 
