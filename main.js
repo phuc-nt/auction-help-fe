@@ -5,7 +5,7 @@ createApp({
         const userInput = ref('');
         const messages = ref([{
             role: 'system',
-            content: "You're a helpful chat bot. Answer short and concise in 150 tokens only."
+            content: "You're a helpful chat bot."
         }]);
         const isLoading = ref(false);
 
@@ -26,7 +26,7 @@ createApp({
             try {
                 isLoading.value = true;
 
-                const response = await axios.post('https://chatbot-be-1-bqclxlq65q-et.a.run.app/api/chat', {
+                const response = await axios.post('https://chatbot-be-1-4yen4awaqq-et.a.run.app/api/chat', {
                     messages: messages.value
                 });
 
