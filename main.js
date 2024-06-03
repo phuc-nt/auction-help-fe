@@ -1,5 +1,8 @@
 const { createApp, ref } = Vue;
 const md = markdownit({ html: true, linkify: true, typographer: true });
+const API_DOMAIN = 'https://auction-help-be-1-4yen4awaqq-et.a.run.app';
+// const API_DOMAIN = 'http://127.0.0.1:8080';
+const CHAT_ENDPOINT = '/api/chat';
 
 createApp({
     setup() {
@@ -31,7 +34,7 @@ createApp({
             try {
                 isLoading.value = true;
 
-                const response = await fetch('https://auction-help-be-1-4yen4awaqq-et.a.run.app/api/chat', {
+                const response = await fetch(`${API_DOMAIN}${CHAT_ENDPOINT}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
